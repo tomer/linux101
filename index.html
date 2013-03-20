@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Linux Introduction</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+	
+	.slide .imgLink { border-bottom: none; }
+	
+	.slide.cover {background: white;}
+	
+	.slide mark {
+    padding: 3px 8px;
+    border-radius: 8px 8px 8px 8px;
+    background: rgb(250,250,162);
+    }
+    
+	.slide pre {
+		white-space: none;
+	}
+		#Cover h2 {
+			margin:65px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+			}
+		#Picture h2 {
+			color:#FFF;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Linux introduction</h1>
+		<p><a href="http://tomercohen.com/">Tomer Cohen</a></p>
+	</header>
+
+	<section class="slide cover" id="Cover"><div>
+		<h2>Linux introduction</h2>
+		<p>Tomer Cohen, <a href="http://tomercohen.com/">http://tomercohen.com/</a></p>
+		<!--img src="pictures/cover.jpg" alt=""-->
+	</div></section>
+	
+	<section class="slide shout" id="History" data-timing="00:05"><div>
+	<h2>History</h2>
+	</div></section>
+	
+	<section class="slide" id="History.Unix"><div>
+	<h2>Unix</h2>
+	<ul>
+	  <li>Development started on 1969 in AT&T's Bell Labs</li>
+	  <li><mark>Written in PDP-11 Assembly</mark>, released on 1971</li>
+	  <li>Re-written in a new, dedicated programming language named C, 1972</li>
+	  <li>Became <mark>the first portable</mark> operating system</li>
+	  <li>Due to legal limitations, source code was available for anyone who asked for it, and <mark>quickly became favorite</mark> in academic institutes as well as commercial vendors.</li>
+	</ul>
+	</div></section>
+	
+	<section class="slide" id="History.GNU"><div>
+	<h2>GNU</h2>
+	<ul>
+	  <li>"Printer Drivers Crisis"</li>
+	  <li>started in 1983 by Richard Stallman, with the goal of creating a "complete Unix-compatible software system" composed entirely of free software.
+	</ul>
+	</div></section>		
+	
+	<section class="slide" id="History.GNU-philosophy"><div>
+	<h2>GNU</h2>
+	<ul>
+		<li>Stallman wanted computer users to be "free", as most were in the 1960s and 1970s – <mark>free to study</mark> the source code of the software they use, <mark>free to share</mark> the software with other people, <mark>free to modify</mark> the behavior of the software, and <mark>free to publish</mark> their modified versions of the software. </li>
+	  <li>The GNU philosophy was later published as the GNU Manifesto in March 1985.</li>
+	</ul>
+	</div></section>	
+	
+	<section class="slide" id="History.Linux"><div>
+	<h2>Linux</h2>
+
+<figure>
+			<blockquote>
+				<p>Hello everybody out there using minix -</p>
+			  <p>I'm doing a (free) operating system (just a hobby, won't be big and
+				  professional like gnu) for 386(486) AT clones.  This has been brewing
+				  since april, and is starting to get ready.  I'd like any feedback on
+				  things people like/dislike in minix, as my OS resembles it somewhat
+				  (same physical layout of the file-system (due to practical reasons)
+				  among other things).</p>
+			</blockquote>
+			<figcaption>Linus Benedict Torvalds, comp.os.minix Newsgroup, 25 Aug 91</figcaption>
+		</figure>	
+	</div></section>
+	
+	<section class="slide shout" id="Linux" data-timing="00:05"><div>
+	<h2>Linux</h2>
+	</div></section>	
+	
+	<section class="slide" id="Linux.Kernel"><div>
+	<h2>Linux</h2>
+	<ul>
+		<li>Linux is not a whole operating system, but only a kernel.</li>
+		<li>The operating system consists of a kernel, and a large set of applications.</li>
+		<li>Collecting applications is a mess, and people started building software collections called Distributions.</li>
+	</ul>
+	</div></section>	
+	
+	
+		<section class="slide" id="Linux.Distributions"><div>
+	<h2>Linux Distributions</h2>
+
+	<a class="imgLink" href="https://www.archlinux.org/"><img src="Pictures/Distros/Archlinux-official-fullcolour.svg" height="90" width="300" title="Arch"/></a>
+	<a class="imgLink" href="http://www.centos.org/"><img src="Pictures/Distros/CentOS_full_logo.svg" height="90" width="300" title="CentOS"/></a>
+  <a class="imgLink" href="http://www.debian.org/"><img src="Pictures/Distros/Debian-OpenLogo.svg" height="90" title="Debian"/></a>
+	<a class="imgLink" href="http://fedoraproject.org"><img src="Pictures/Distros/Fedora_Project_logo.png" alt="Fedora"/></a>
+	<a class="imgLink" href="http://www.gentoo.org"><img src="Pictures/Distros/Gentoo_Linux_logo_matte.svg" height="90" title="Gentoo"/></a>
+	<a class="imgLink" href="http://www.linuxmint.com/"><img src="Pictures/Distros/Official_Linux_Mint_logo.svg" height="90" width="300" title="Mint"/></a>
+	<a class="imgLink" href="http://opensuse.org/"><img src="Pictures/Distros/OpenSUSE_official-logo-color.svg" height="90" width="300" title="OpenSuse"/></a>
+  <a class="imgLink" href="http://www.redhat.com"><img src="Pictures/Distros/RedHat.svg" height="90" alt="Red Hat" /></a>
+	<a class="imgLink" href="http://www.slackware.com/"><img src="Pictures/Distros/Slackware_web_logo.svg" height="90" width="300" title="Slackware"/></a>
+  <a class="imgLink" href="http://www.ubuntu.com"><img src="Pictures/Distros/Logo-ubuntu_no(r)-black_orange-hex.svg" height="90" width="300" title="Ubuntu"/></a>
+  
+	</div></section>
+	
+	<section class="slide" id="Linux.is.everywhere"><div>
+	<h2>Linux is everywhere</h2>
+	<ul>
+		<li>Servers and supercomupters — more than 90% of today's 500 fastest supercomputers run Linux </li>
+		<li>Desktop computers</li>
+		<li>Mobile phones — Android, Bada, Firefox OS, Mobilin</li>
+		<li>Network equipments — Routers, Access Points, Modems</li>
+		<li>Smart TVs, PDAs, Home entertainment systems, ATMs, etc.</li>
+	</ul>
+	</div></section>
+	
+	<section class="slide" id="GUI" data-timing="00:05"><div>
+	<h2>Linux GUI</h2>
+	</div></section>
+	
+	<section class="slide cover" data-timing="00:05"><div>
+		<img src="Pictures/Screenshots/XFCE-4.10-Desktop.png" alt="XFCE 4.10 Desktop" style="max-width: 100%; max-height:100%; background: white;"/>
+	</div></section>
+
+	<section class="slide cover" data-timing="00:05"><div>
+		<img src="Pictures/Screenshots/Cinnamon_1.6.7,_Menu_(Linux_Mint_Maya).png" alt="Cinnamon" style="max-width: 100%; max-height:100%; background: white;"/>
+	</div></section>
+	
+	<section class="slide cover" data-timing="00:05"><div>
+		<img src="Pictures/Screenshots/KDE_4.png" alt="KDE 4" style="max-width: 100%; max-height:100%; background: white;"/>
+	</div></section>
+
+	<section class="slide cover" data-timing="00:05"><div>
+		<img src="Pictures/Screenshots/Unity_5.12_on_Ubuntu_12.04.png" alt="Unity 5.12" style="max-width: 100%; max-height:100%; background: white;"/>
+	</div></section>
+	
+	<section class="slide cover" data-timing="00:05"><div>
+		<img src="Pictures/Screenshots/GNOME_3.6_with_Shell_Overview.png" alt="GNOME 3.6" style="max-width: 100%; max-height:100%; background: white;"/>
+	</div></section>
+	
+	<section class="slide" id="Graphical.UI" data-timing="00:05"><div>
+	<h2>Linux GUI</h2>
+	<ul>
+		<li>Linux has few different display managers — X [Windows], XOrg, WayLand etc.
+		<li>Linux has multiple graphical environments — <a href="http://gnome.org">GNOME</a>, <a href="http://kde.org">KDE</a>, Unity, XFCE, Cinnamon etc.
+	</ul>
+	</div></section>	
+	
+	
+	
+	
+	
+	<!--  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                       -->
+	
+	<section class="slide" data-timing="00:05"><div>
+		<h2>Slide with timer</h2>
+		<p>It will change right in five seconds</p>
+		<footer>
+			Presenter note for the first slide
+		</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Heading</h2>
+		<p>In your slides text you can use <a href="http://google.com/">links</a> and various inline elements for <em>emotional</em> and <strong>strong</strong> emphasis or just for <i>italic</i> or <b>bold</b> decoration. <code>&lt;code&gt;</code> is used for inline code samples.</p>
+		<footer>
+			Presenter note for the second slide
+		</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Two rows.<br> Mighty heading</h2>
+		<p>You can use two lines header but it would reduce space on a slide. The “Ribbon” theme is designed for seven lines of code after one-line header by default.</p>
+		<p class="note">This paragraph could be used as a footnote</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Various lists</h2>
+		<ul>
+			<li>Simple lists are marked with bullets.</li>
+			<li>Ordered lists begin with a number.</li>
+			<li>You can even nest lists one inside another.
+				<ol>
+					<li>Or mix their types.</li>
+					<li>But do not go too far.</li>
+					<li>Otherwise audience will be bored.</li>
+				</ol>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Serious citation</h2>
+		<figure>
+			<blockquote>
+				<p>You can wrap one or more paragraphs into citation, which will make text italic and add a nice quote on the left. Giving the citation source would make it even more serious.</p>
+			</blockquote>
+			<figcaption>Vadim Makeev</figcaption>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>When you have a lot of code</h2>
+		<pre>
+			<code>&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
+			<code>    &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Code in separate blocks</h2>
+		<pre>
+			<code><mark>&lt;html</mark> lang="en"&gt;</code>
+		</pre>
+		<p class="note">Now you can add a note for each block</p>
+		<pre>
+			<code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
+		</pre>
+		<p class="note">And explain what is interesting about it</p>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>You can shout<br> this way</h2>
+	</div></section>
+	<section class="slide cover" id="Picture"><div>
+		<h2>And place any picture</h2>
+		<img src="pictures/picture.jpg" alt="">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Inner navigation</h2>
+		<ol>
+			<li>Lets you change objects one by one</li>
+			<li class="next">For example, show list items</li>
+			<li class="next">Or switch pictures</li>
+			<li class="next">And much more</li>
+			<li class="next">But it will work only once</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Shower Presentation Engine</h2>
+		<p>Vadim Makeev, Opera Software</p>
+		<ul>
+			<li><a href="http://pepelsbey.net">pepelsbey.net</a></li>
+			<li><a href="http://twitter.com/pepelsbey">twitter.com/pepelsbey</a></li>
+			<li><a href="mailto:pepelsbey@gmail.com">pepelsbey@gmail.com</a></li>
+		</ul>
+		<p>Shower: <a href="https://github.com/shower/shower">github.com/shower/shower</a></p>
+	</div></section>
+	
+	
+	<p class="badge"><a href="https://github.com/tomer/linux101">Fork me on Github</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+
+</body>
+</html>
