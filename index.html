@@ -11,6 +11,8 @@
 		-->
 	<style>
 	
+	.slide { background: url(Pictures/Tux.svg) no-repeat scroll 865px 0px white; background-size: 15%}
+	
 	.slide .imgLink { border-bottom: none; }
 	
 	.slide.cover {background: white;}
@@ -22,7 +24,7 @@
     }
     
 	.slide pre {
-		white-space: none;
+		white-space: pre-line;
 	}
 		#Cover h2 {
 			margin:65px 0 0;
@@ -42,9 +44,9 @@
 	</header>
 
 	<section class="slide cover" id="Cover"><div>
-		<h2>Linux introduction</h2>
+		<h2 style="color: black; text-shadow: 5px 5px 5px silver">Linux introduction</h2>
 		<p>Tomer Cohen, <a href="http://tomercohen.com/">http://tomercohen.com/</a></p>
-		<!--img src="pictures/cover.jpg" alt=""-->
+		<img src="Pictures/Tux.svg" style="width=100%; opacity: 0.2" alt="">
 	</div></section>
 	
 	<section class="slide shout" id="History" data-timing="00:05"><div>
@@ -170,125 +172,180 @@
 			<img src="Pictures/GraphicalEnvironments/Wayland_Logo.svg" height="90" src="WayLand" />			
 		<li>Linux has multiple graphical environments — <a href="http://gnome.org">GNOME</a>, <a href="http://kde.org">KDE</a>, Unity, XFCE, Cinnamon etc.<br/>
 			<img src="Pictures/GraphicalEnvironments/Xfce_logo.svg" height="90" alt="xfce" />		
-			<img src="Pictures/GraphicalEnvironments/Gnomelogo.svg" height="90" alt="Gnome" />
+			<img src="Pictures/GraphicalEnvironments/Unity_Logo.svg" height="90" alt="Unity" />
 			<img src="Pictures/GraphicalEnvironments/KDE_logo.svg"  height="90" alt="KDE" />
+			<img src="Pictures/GraphicalEnvironments/Gnomelogo.svg" height="90" alt="Gnome" />
 	</ul>
 	</div></section>
 	
 	<section class="slide" id="Software"><div>
-	<h2>Linux Software</h2>
+	<h2>Linux software</h2>
 	<ul>
 		<li>Linux has large collection of software running natively, such as web browsers, productivity suits, etc.
-		<li>If something is missing, there is good chance it has alternatives, sometimes even better than the original software. (see <a href="http://alternativeto.net/"/>http:// alternative to .net</a>)
+		<li>If something is missing, there is good chance it has alternatives, sometimes even better than the original software.
 		<li>Linux has software compatibility layer for running most of Windows software (WINE).
 		<li>It is possible to run emulated operating system using Xen, Qemu, DosBox, VirtualBox, VMWare, etc.
 	</ul>
 	</div></section>
 	
 	<section class="slide" id="Software.Repositories"><div>
-	<h2>Software Repositories</h2>
+	<h2>Linux software repositories</h2>
 	<ul>
 		<li>In Linux you should never install software directly from the web.
 		<li class="next">Instead, there are download servers called <mark class="important">Repositories</mark>.
-		<li>Later on, some operating systems started to serve software in Application Stores, but these are yet incomplete comparing to the rich software collections available on mainstream Linux.
+		<li class="next">Later on, some operating systems started to serve software in Application Stores, but these are yet incomplete comparing to the rich software collections available on mainstream Linux.
 	</ul>
-	</div></section>	
+	</div></section>
 	
-	<!--  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                       -->
+	<section class="slide" id="User.Permissions"><div>
+	<h2>Linux user permissions</h2>
+	<ul>
+		<li>Linux is a multi-user operating system.
+		<li>Groups consists users. Each user can be listed in several groups. 
+		<li>Only the first user, named <mark>root</mark> has the administration rights. 
+	</ul>
+	</div></section>
 	
-	<section class="slide" data-timing="00:05"><div>
-		<h2>Slide with timer</h2>
-		<p>It will change right in five seconds</p>
-		<footer>
-			Presenter note for the first slide
-		</footer>
+	<section class="slide" id="sudo"><div>
+	<h2>Linux user policy</h2>
+	
+	<a href="https://xkcd.com/149/" class="imgLink" style="float:right;padding: 5px;"><img src="Pictures/sandwich.png" title="sudo make me a sandwich!"></a>
+	<ul>
+		<li>Users can become root by logging-in as root (not recommended!),
+		<li>become root using the <kbd>su root</kbd> command,
+		<li>Modern Linux can run commands as root using the <kbd>sudo</kbd> command, which requires the user to be in the <code>sudoers</code> group.
+	</ul>
 	</div></section>
-	<section class="slide"><div>
-		<h2>Heading</h2>
-		<p>In your slides text you can use <a href="http://google.com/">links</a> and various inline elements for <em>emotional</em> and <strong>strong</strong> emphasis or just for <i>italic</i> or <b>bold</b> decoration. <code>&lt;code&gt;</code> is used for inline code samples.</p>
-		<footer>
-			Presenter note for the second slide
-		</footer>
+	
+	<slide class="slide" id="File.Permissions"><div>
+	<h2>Linux file permissions</h2>
+	<ul>
+		<li>In normal Linux filesystems, there are three kinds of permissions to each file or directory; Read, Write, Execute
+		<li>Each permission can be given to exact one user (the file owner), one group, and everyone else. 
+		<li><code>rw- r-- --- user group filename</code>
+		<li>… means that the user has read/write permissions, the group can read the file, and the file is inaccessible to others.
+	</ul>
+	</div></slide>	
+	
+	<slide class="slide" id="Filesystem.Structure"><div>
+	<h2>Linux filesystem structure</h2>
+	<p>In Linux, everything lives in a logical filesystem…
+	<ul>
+		<li><kbd>/</kbd> — The Filesystem root
+		<li><kbd>/boot</kbd> — System's boot loader
+		<li><kbd>/dev</kbd> — The location of every hardware device
+		<li><kbd>/proc</kbd> — Every process represents a file		
+		<li><kbd>/home/&lt;user&gt;</kbd> — User directories
+	</ul>
+	</div></slide>	
+	
+	<slide class="slide" id="Filesystem.Structure.2"><div>
+	<h2>Linux filesystem structure</h2>
+	<ul>
+		<li><kbd>/etc</kbd> — Applications configurations
+		<li><kbd>/lib</kbd> — Shared libraries
+		<li><kbd>/bin</kbd> — System binaries
+		<li><kbd>/usr</kbd> — Non-critical files
+		<li><kbd>/var</kbd> — Variable files; Files that change periodically
+		<li><kbd>/tmp</kbd> – Temporary storage; empty on boot time 	
+	</ul>
+	</div></slide>	
+	
+	<section class="slide shout cover" id="Advanced.Linux" data-timing="00:05"><div>
+	<h2>Advanced Linux</h2>
 	</div></section>
-	<section class="slide"><div>
-		<h2>Two rows.<br> Mighty heading</h2>
-		<p>You can use two lines header but it would reduce space on a slide. The “Ribbon” theme is designed for seven lines of code after one-line header by default.</p>
-		<p class="note">This paragraph could be used as a footnote</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Various lists</h2>
-		<ul>
-			<li>Simple lists are marked with bullets.</li>
-			<li>Ordered lists begin with a number.</li>
-			<li>You can even nest lists one inside another.
-				<ol>
-					<li>Or mix their types.</li>
-					<li>But do not go too far.</li>
-					<li>Otherwise audience will be bored.</li>
-				</ol>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ul>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Serious citation</h2>
-		<figure>
-			<blockquote>
-				<p>You can wrap one or more paragraphs into citation, which will make text italic and add a nice quote on the left. Giving the citation source would make it even more serious.</p>
-			</blockquote>
-			<figcaption>Vadim Makeev</figcaption>
-		</figure>
-	</div></section>
-	<section class="slide"><div>
-		<h2>When you have a lot of code</h2>
-		<pre>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
-			<code>    &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Code in separate blocks</h2>
-		<pre>
-			<code><mark>&lt;html</mark> lang="en"&gt;</code>
-		</pre>
-		<p class="note">Now you can add a note for each block</p>
-		<pre>
-			<code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
-		</pre>
-		<p class="note">And explain what is interesting about it</p>
-	</div></section>
-	<section class="slide shout"><div>
-		<h2>You can shout<br> this way</h2>
-	</div></section>
-	<section class="slide cover" id="Picture"><div>
-		<h2>And place any picture</h2>
-		<img src="pictures/picture.jpg" alt="">
-	</div></section>
-	<section class="slide"><div>
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you change objects one by one</li>
-			<li class="next">For example, show list items</li>
-			<li class="next">Or switch pictures</li>
-			<li class="next">And much more</li>
-			<li class="next">But it will work only once</li>
-		</ol>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Shower Presentation Engine</h2>
-		<p>Vadim Makeev, Opera Software</p>
-		<ul>
-			<li><a href="http://pepelsbey.net">pepelsbey.net</a></li>
-			<li><a href="http://twitter.com/pepelsbey">twitter.com/pepelsbey</a></li>
-			<li><a href="mailto:pepelsbey@gmail.com">pepelsbey@gmail.com</a></li>
-		</ul>
-		<p>Shower: <a href="https://github.com/shower/shower">github.com/shower/shower</a></p>
-	</div></section>
+	
+	<slide class="slide" id="why.cli"><div>
+	<h2>Why CLI?</h2>
+	<p>Most operating systems have Command Line Interface in addition to the Graphical UI.
+	<p>Linux isn't different. In fact, almost everything in Linux can be done from the command line.
+	</div></slide>
+	
+	<slide class="slide" id="local.and.remote.shell"><div>
+	<h2>Local and remote</h2>
+	<p>It is possible to open command line from the Terminal application, or from any of the attached Virtual Terminals.
+	<p>Remote access possible using SSH, which stands for Secure SHell, and can transfer files, execute commands, and drop the remote user into local shell.
+	</div></slide>	
+	
+	<slide class="slide" id="filesystem.commands"><div>
+	<h2>Filesystem commands</h2>
+	<ul>
+		<li><code>ls</code> – Show content of current directory (similar to DOS <kbd>dir</kbd> command)
+		<li><code>cd</code> – change directory (similar to DOS <kbd>cd</kbd> command)
+		<li><code>pwd</code> – show current directory (again, similar to DOS <kbd>cd</kbd> command)	
+		<li><code>mkdir</code> – change directory (similar to DOS <kbd>mkdir</kbd>/<kbd>md</kbd> commands)
+		<li><code>cat</code> – Print file content (Similar to DOS <kbd>type</kbd> command)
+		<li><code>rmdir</code> – remove directory (similar to DOS <kbd>rmdir</kbd>/<kbd>rd</kbd> commands)
+		<li><code>rm</code> – remove file(s) (similar to DOS <kbd>del</kbd> command)
+	</ul>
+	</div></slide>	
+	
+	<slide class="slide" id="permissions.commands"><div>
+	<h2>Permissions commands</h2>
+	<ul>
+		<li><code>chmod</code> – Change file permissions (similar to Windows <kbd>cacl</kbd> command)
+		<li><code>chown</code> – change file owner
+		<li><code>chgrp</code> – change file group
+	</ul>
+	</div></slide>
+		
+	<slide class="slide" id="Miscellaneous.commands"><div>
+	<h2>Miscellaneous commands</h2>
+	<ul>
+		<li><code>ps</code> – Show list of processes (similar to Windows <kbd>tasklist</kbd> command)
+		<li><code>kill</code> – Terminate a running process
+		<li><code>man</code> – Provide documentation for a given command (Very handy! ☺)
+		<li><code>touch</code> – Create an empty file/Set file modification time to now
+		<li><code>sort</code> – Sort a given text file
+		<li><code>grep</code> – Find given patterns in text stream
+		<li><code>sed</code> – Manipulate text streams
+	</ul>
+	</div></slide>
+	
+	<slide class="slide" id="Streams"><div>
+	<h2>Standard Streams</h2>
+	<p>Linux contain three different streams:
+	<ul>
+		<li><mark>STDIN</mark> – Standard Input
+		<li><mark>STDOUT</mark> – Standard Output
+		<li><mark>STDERR</mark> – A stream dedicated to print error messages
+	</ul>
+	</div></slide>	
+	
+	<slide class="slide" id="Redirections"><div>
+	<h2>Stream Redirection</h2>
+	<p>&nbsp;</p>
+	<ul>
+		<li><code>ls &gt; filename</code> – Redirect command output to file
+		<li><code>cat foo &gt;&gt; filename</code> – Append command output to file
+		<li><code>cat &lt; filename</code> – Read input from file
+		<li><code>ls &amp;&gt; filename</code> – Redirect both STDOUT and STDERR to a file
+	</ul>
+	</div></slide>
+	
+	<slide class="slide" id="Plumbering"><div>
+	<h2>Linux Plumbering</h2>
+	<p>The pipe operator <kbd>|</kbd> use the output of one command as the input to the second command.
+	<p>It allow us run few commands in a batch so each command will process the output of the previous command.
+	</div></slide>
+	
+	<slide class="slide" id="Plumbering.demo"><div>
+	<h2></h2>
+	<pre>$ <mark>date</mark> # Show current time/date
+	Wed Mar 20 23:18:55 IST 2013
+	$ <mark>date | grep -o ..:..:..</mark> # Extract the time pattern
+	23:18:55
+	$ <mark>ls | grep [א-ת]</mark> # Find files contain Hebrew letters</pre>
+	</div></slide>
+	
+	
+	<slide class="slide" id="eof"><div>
+	<h2>EOF</h2><p><p>
+	<p>Tomer Cohen, <a href="http://tomercohen.com/">http://tomercohen.com</a>
+	</div></slide>
+	
+	
+	
 	
 	
 	<p class="badge"><a href="https://github.com/tomer/linux101">Fork me on Github</a></p>
