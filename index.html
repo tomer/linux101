@@ -222,7 +222,7 @@
 	</ul>
 	</div></section>
 	
-	<slide class="slide" id="File.Permissions"><div>
+	<section class="slide" id="File.Permissions"><div>
 	<h2>Linux file permissions</h2>
 	<ul>
 		<li>In normal Linux filesystems, there are three kinds of permissions to each file or directory; Read, Write, Execute
@@ -230,9 +230,9 @@
 		<li><code>rw- r-- --- user group filename</code>
 		<li>… means that the user has read/write permissions, the group can read the file, and the file is inaccessible to others.
 	</ul>
-	</div></slide>	
+	</div></section>	
 	
-	<slide class="slide" id="Filesystem.Structure"><div>
+	<section class="slide" id="Filesystem.Structure"><div>
 	<h2>Linux filesystem structure</h2>
 	<p>In Linux, everything lives in a logical filesystem…
 	<ul>
@@ -242,9 +242,9 @@
 		<li><kbd>/proc</kbd> — Every process represents a file		
 		<li><kbd>/home/&lt;user&gt;</kbd> — User directories
 	</ul>
-	</div></slide>	
+	</div></section>	
 	
-	<slide class="slide" id="Filesystem.Structure.2"><div>
+	<section class="slide" id="Filesystem.Structure.2"><div>
 	<h2>Linux filesystem structure</h2>
 	<ul>
 		<li><kbd>/etc</kbd> — Applications configurations
@@ -255,26 +255,26 @@
 		<li><kbd>/tmp</kbd> – Temporary storage; empty on boot time
 		<li><kbd>/mnt</kbd> – Custom mount points; Also <kbd>/media</kbd>
 	</ul>
-	</div></slide>	
+	</div></section>	
 	
 	<section class="slide shout cover" id="Advanced.Linux" data-timing="00:05"><div>
 	<h2>Advanced Linux</h2>
 	</div></section>
 	
-	<slide class="slide" id="why.cli"><div>
+	<section class="slide" id="why.cli"><div>
 	<h2>Why CLI?</h2>
 	<p>Most operating systems have Command Line Interface in addition to the Graphical UI.
 	<p>Linux isn't different. In fact, almost everything in Linux can be done from the command line.
-	</div></slide>
+	</div></section>
 	
-	<slide class="slide" id="local.and.remote.shell"><div>
+	<section class="slide" id="local.and.remote.shell"><div>
 	<h2>Local and remote</h2>
 	<ul><li>It is possible to open command line from the Terminal application, or from any of the attached Virtual Terminals.</li>
 	<li>Remote access possible using SSH, which stands for Secure SHell, and can transfer files, execute commands, and drop the remote user into local shell.</li>
 	<li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a> is a great SSH client for Windows, <a href="http://winscp.net">WinSCP</a> is great client for SCP/SFTP/FTP for Windows.</p></li></ul>
-	</div></slide>	
+	</div></section>	
 	
-	<slide class="slide" id="filesystem.commands"><div>
+	<section class="slide" id="filesystem.commands"><div>
 	<h2>Filesystem commands</h2>
 	<ul>
 		<li><code>ls</code> – Show content of current directory (similar to DOS <kbd>dir</kbd> command)
@@ -285,18 +285,18 @@
 		<li><code>rmdir</code> – Remove directory (similar to DOS <kbd>rmdir</kbd>/<kbd>rd</kbd> commands)
 		<li><code>rm</code> – Remove file(s) (similar to DOS <kbd>del</kbd> command)
 	</ul>
-	</div></slide>	
+	</div></section>	
 	
-	<slide class="slide" id="permissions.commands"><div>
+	<section class="slide" id="permissions.commands"><div>
 	<h2>Permissions commands</h2>
 	<ul>
 		<li><code>chmod</code> – Change file permissions (similar to Windows <kbd>cacl</kbd> command)
 		<li><code>chown</code> – Change file owner
 		<li><code>chgrp</code> – Change file group
 	</ul>
-	</div></slide>
+	</div></section>
 		
-	<slide class="slide" id="Miscellaneous.commands"><div>
+	<section class="slide" id="Miscellaneous.commands"><div>
 	<h2>Miscellaneous commands</h2>
 	<ul>
 		<li><code>ps</code> – Show list of processes (similar to Windows <kbd>tasklist</kbd> command)
@@ -307,9 +307,9 @@
 		<li><code>grep</code> – Find given patterns in text stream
 		<li><code>sed</code> – Manipulate text streams
 	</ul>
-	</div></slide>
+	</div></section>
 	
-	<slide class="slide" id="Streams"><div>
+	<section class="slide" id="Streams"><div>
 	<h2>Standard Streams</h2>
 	<p>Linux contain three different streams:
 	<ul>
@@ -317,9 +317,9 @@
 		<li><mark>STDOUT</mark> – Standard Output
 		<li><mark>STDERR</mark> – A stream dedicated to print error messages
 	</ul>
-	</div></slide>	
+	</div></section>	
 	
-	<slide class="slide" id="Redirections"><div>
+	<section class="slide" id="Redirections"><div>
 	<h2>Stream Redirection</h2>
 	<p>&nbsp;</p>
 	<ul>
@@ -328,30 +328,30 @@
 		<li><code>cat &lt; filename</code> – Read input from file
 		<li><code>ls &amp;&gt; filename</code> – Redirect both STDOUT and STDERR to a file
 	</ul>
-	</div></slide>
+	</div></section>
 	
-	<slide class="slide" id="Plumbering"><div>
+	<section class="slide" id="Plumbering"><div>
 	<h2>Linux Plumbering</h2>
 	<p>The pipe operator <kbd>|</kbd> use the output of one command as the input to the second command.
 	<p>It allow us run few commands in a batch so each command will process the output of the previous command.
-	</div></slide>
+	</div></section>
 	
-	<slide class="slide" id="Plumbering.demo"><div>
+	<section class="slide" id="Plumbering.demo"><div>
 	<h2></h2>
 	<pre>$ <mark>date</mark> # Show current time/date
 	Wed Mar 20 23:18:55 IST 2013
 	$ <mark>date | grep -o ..:..:..</mark> # Extract the time pattern
 	23:18:55
 	$ <mark>ls | grep [א-ת]</mark> # Find files contains Hebrew letters</pre>
-	</div></slide>
+	</div></section>
 	
 	
-	<slide class="slide" id="eof"><div>
+	<section class="slide" id="eof"><div>
 	<h2>Thanks!</h2><p><p>
 	<p>Tomer Cohen, <a href="http://tomercohen.com/">http://tomercohen.com</a></p>
 	<p />
 	<p>presentation slides available online: http://tomer.github.com/linux101</p>
-	</div></slide>
+	</div></section>
 	
 	
 	
