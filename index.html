@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" class="fade">
 <head>
 	<title>Linux Introduction</title>
 	<link rel="shortcut icon" href="Pictures/Tux-icon.png" />
@@ -12,7 +12,9 @@
 		-->
 	<style>
 	
-	.slide { background: url(Pictures/Tux.svg) no-repeat scroll 865px 0px white; background-size: 15%}
+	.slide { background: white; }
+/*	.full { background: url(Pictures/Tux.svg) no-repeat scroll 865px 0px white; background-size: 15%}*/
+	.full { background: white; }
 	
 	.slide .imgLink { border-bottom: none; }
 	
@@ -36,6 +38,22 @@
 		#Picture h2 {
 			color:#FFF;
 			}
+			
+	/* 
+	Smooth fading in between slides: 
+	add "fade" class to <html>
+*/
+.fade .full section.slide  {
+	-webkit-transition: opacity 1s;
+		 -moz-transition: opacity 1s;
+	    -ms-transition: opacity 1s;
+       -o-transition: opacity 1s;
+	        transition: opacity 1s;
+  opacity: 0;
+}
+.fade .full section.slide:target { 
+	opacity: 1; 
+}
 	</style>
 </head>
 <body class="list">
@@ -336,15 +354,14 @@
 	<p>It allow us run few commands in a batch so each command will process the output of the previous command.
 	</div></section>
 	
-	<section class="slide" id="Plumbering.demo"><div>
-	<h2></h2>
+	<section class="slide" id="piped.commands.demo"><div>
+	<h2>Single Line scripting</h2>
 	<pre>$ <mark>date</mark> # Show current time/date
 	Wed Mar 20 23:18:55 IST 2013
 	$ <mark>date | grep -o ..:..:..</mark> # Extract the time pattern
 	23:18:55
-	$ <mark>ls | grep [א-ת]</mark> # Find files contains Hebrew letters</pre>
+	$ <mark>ls | grep [א-ת] &gt; list.txt</mark> # Find files contains Hebrew letters and write these to a file</pre>
 	</div></section>
-	
 	
 	<section class="slide" id="eof"><div>
 	<h2>Thanks!</h2><p><p>
